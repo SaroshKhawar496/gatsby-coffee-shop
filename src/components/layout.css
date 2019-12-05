@@ -1,6 +1,6 @@
 :root {
   --mainBrown: #2d1ef1;
-  --mainYellow: #ff9e09;
+  --mainYellow: rgb(255, 158, 9);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -20,7 +20,7 @@ h4,
 h5,
 h6 {
   font-family: "Courier New", Courier, monospace !important;
-  /* letter-spacing: 0rem !important; */
+  letter-spacing: 0.2rem !important;
 }
 .text-yellow {
   color: var(--mainYellow);
@@ -30,4 +30,17 @@ h6 {
   cursor: pointer;
   color: var(--mainYellow);
   font-size: 2rem;
+}
+
+/* FIX: linear background not working...!!! */
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  /* vertical alignment */
+  align-items: center;
+  /* horizontal alignment */
+  justify-content: center;
+  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.9));
+  background-position: center;
+  background-size: cover;
 }
