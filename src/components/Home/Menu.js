@@ -81,7 +81,7 @@ export default class Menu extends Component {
                     {/* item text */}
                     <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between">
-                        <h6 className="mb-0">
+                        <h6 className="mb-0 text-capitalize">
                           <small>{node.title}</small>
                           {/* {node.title} */}
                         </h6>
@@ -89,7 +89,7 @@ export default class Menu extends Component {
                           <small>${node.price}</small>
                         </h6>
                       </div>
-                      <p className="text-muted">
+                      <p className="text-muted text-capitalize">
                         <small>{node.description.description}</small>
                       </p>
                     </div>
