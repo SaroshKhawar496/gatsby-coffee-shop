@@ -8,6 +8,7 @@ const getProducts = graphql`
     products: allContentfulCoffeeProduct {
       edges {
         node {
+          id
           title
           price
           image {
