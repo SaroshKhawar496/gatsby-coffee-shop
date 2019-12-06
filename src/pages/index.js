@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import BackgroundSection from "../components/Globals/BackgroundSection"
-import Info from '../components/Home/Info'
+import Info from "../components/Home/Info"
+import Menu from "../components/Home/Menu"
 
 
 // data is coming from page query
@@ -15,6 +16,7 @@ const IndexPage = ({ data }) => (
       title="regular joe's"
     />
     <Info />
+    <Menu items={data.menu}/>
   </Layout>
 )
 
@@ -25,6 +27,23 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    menu: allContentfulCoffeeItem {
+      edges {
+        node {
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(width: 50, height: 50) {
+              ...GatsbyContentfulFixed
+            }
+          }
         }
       }
     }
