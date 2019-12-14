@@ -48,7 +48,7 @@ export default class Menu extends Component {
       return (
         <section className="menu py-5">
           <div className="container">
-            <Title title="best of our menu" />
+            <Title title="our exciting menu" />
             {/* categories */}
             <div className="row mb-5">
               <div className="col-10 mx-auto text-center">
@@ -81,16 +81,20 @@ export default class Menu extends Component {
                     {/* item text */}
                     <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between">
-                        <h6 className="mb-0 text-capitalize">
+                        <h5 className="mb-0 text-capitalize">
                           <small>{node.title}</small>
                           {/* {node.title} */}
-                        </h6>
-                        <h6 className="mb-0 text-yellow">
-                          <small>${node.price}</small>
-                        </h6>
+                        </h5>
+                        <h5 className="mb-0 text-yellow ">
+                          <small className="font-weight-bold">
+                            ${node.price}
+                          </small>
+                        </h5>
                       </div>
-                      <p className="text-muted text-capitalize">
-                        <small>{node.description.description}</small>
+                      <p className=" text-capitalize">
+                        <small className="menu-text">
+                          {node.description.description}
+                        </small>
                       </p>
                     </div>
                   </div>

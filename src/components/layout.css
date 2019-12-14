@@ -41,7 +41,8 @@ h6 {
   align-items: center;
   /* horizontal alignment */
   justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.9));
+  background: black;
+  /* linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.9)); */
   background-position: center;
   background-size: cover;
 }
@@ -63,6 +64,12 @@ h6 {
 .about-background {
   min-height: 60vh;
 }
-.menu, .contact{
+.menu,
+.contact {
   background: var(--mainGrey);
+}
+
+.menu-text {
+  font-size: 0.85rem;
+  /* font-weight: bold; */
 }
